@@ -1,2 +1,4 @@
-# Curso_Python_CoderHouse
-Complete python course by CoderHouse 
+🔥  Python - Curso CoderHouse - Turma 54335
+
+👨‍💻 Guilherme Crivellenti Massaro
+
