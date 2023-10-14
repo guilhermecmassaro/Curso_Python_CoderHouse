@@ -1,0 +1,34 @@
+# Importando as bibliotecas necessárias
+
+import pandas as pd
+import requests
+from plyer import notification
+
+# Realizando a conexão com a API nas três tabelas diferentes
+
+def fazer_requisicao_e_notificar(url, tabela): # função destinada a conectar na url desejada e retornar o json
+    response = requests.get(url)
+    if response.status_code == 200:
+        notification.notify(title='Conexão com API', message=f'Conexão realizada com sucesso na Tabela {tabela}')
+        print(f'Conexão realizada com sucesso na Tabela {tabela}')
+        return response.json()
+    else:
+        notification.notify(title='Conexão com API', message=f'Conexão não realizada na Tabela {tabela}')
+        print(f'Erro na Tabela {tabela}')
+        return None
+
+url_1 = 'https://brasilapi.com.br/api/banks/v1'
+url_2 = 'https://brasilapi.com.br/api/cvm/corretoras/v1'
+url_3 = 'https://brasilapi.com.br/api/cptec/v1/clima/capital'
+
+bancos = fazer_requisicao_e_notificar(url_1, 1)
+corretoras = fazer_requisicao_e_notificar(url_2, 2)
+climas = fazer_requisicao_e_notificar(url_3, 3)
+
+# Opcional: Visualização dos Dataframes para verificar os dados
+
+df_bancos = pd.DataFrame(bancos)
+df_corretoras = pd.DataFrame(corretoras)
+df_climas = pd.DataFrame(climas)
+
+df_climas.head()
