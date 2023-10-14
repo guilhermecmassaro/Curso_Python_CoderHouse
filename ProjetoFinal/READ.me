@@ -1,0 +1,49 @@
+"""
+Autor:
+Guilherme Crivellenti Massaro
+
+Data da Criação:
+14/10/2023
+
+Versão:
+Python 3.11.6
+
+Notas:
+Abaixo será apresentado algumas dicas para melhor entendimento do código e sua aplicação
+
+--------------------------------------------------------------------------------------------------------
+
+Título: Conexão com API e Análise de Dados
+
+Descrição:
+Este script realiza a conexão com três APIs diferentes e extrai dados em formato JSON. Em seguida, os dados são transformados em DataFrames do Pandas para análise.
+
+Bibliotecas utilizadas:
+- pandas: Para manipulação de dados em formato de tabela.
+- requests: Para fazer solicitações HTTP e obter dados da API.
+- plyer: Para notificar o status da conexão com a API.
+
+Requisitos:
+Certifique-se de que as bibliotecas mencionadas no arquivo `requirements.txt` estejam instaladas para executar o script.
+
+Instruções:
+1. Defina as URLs das APIs desejadas nos URLs de cada tabela.
+2. Execute o script para obter dados da API e notificações de status.
+3. Opcional: Visualize os DataFrames resultantes para análise adicional.
+
+Exemplo:
+```python
+url_1 = 'https://brasilapi.com.br/api/banks/v1'
+url_2 = 'https://brasilapi.com.br/api/cvm/corretoras/v1'
+url_3 = 'https://brasilapi.com.br/api/cptec/v1/clima/capital'
+
+bancos = fazer_requisicao_e_notificar(url_1, 1)
+corretoras = fazer_requisicao_e_notificar(url_2, 2)
+climas = fazer_requisicao_e_notificar(url_3, 3)
+
+df_bancos = pd.DataFrame(bancos)
+df_corretoras = pd.DataFrame(corretoras)
+df_climas = pd.DataFrame(climas)
+
+# Exiba os primeiros registros do DataFrame de clima
+print(df_climas.head())
