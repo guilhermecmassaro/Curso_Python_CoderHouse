@@ -6,6 +6,7 @@ from plyer import notification
 import sqlite3
 
 # Realizando a conexão com as três diferentes e armazenando os dados em variáveis
+
 def fazer_requisicao_e_notificar(url, tabela): # função destinada a conectar na url desejada e retornar o json
     response = requests.get(url)
     if response.status_code == 200:
