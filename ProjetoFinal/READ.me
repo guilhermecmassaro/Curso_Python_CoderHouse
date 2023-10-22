@@ -5,6 +5,9 @@ Guilherme Crivellenti Massaro
 Data da Criação:
 14/10/2023
 
+Data da Atualização:
+22/10/2023
+
 Versão:
 Python 3.11.6
 
@@ -13,37 +16,35 @@ Abaixo será apresentado algumas dicas para melhor entendimento do código e sua
 
 --------------------------------------------------------------------------------------------------------
 
-Título: Conexão com API e Análise de Dados
+Documentação: Conexão com APIs e Manipulação de Dados
 
-Descrição:
-Este script realiza a conexão com três APIs diferentes e extrai dados em formato JSON. Em seguida, os dados são transformados em DataFrames do Pandas para análise.
+Introdução
+
+Este código é um exemplo de um script Python que realiza a conexão com APIs externas para coletar dados e, em seguida, executa algumas operações de manipulação de dados usando a biblioteca Pandas. Além disso, ele demonstra como armazenar os dados em um banco de dados SQLite. Esta documentação fornecerá uma visão geral do código, suas principais funcionalidades e como implementá-lo.
 
 Bibliotecas utilizadas:
-- pandas: Para manipulação de dados em formato de tabela.
-- requests: Para fazer solicitações HTTP e obter dados da API.
-- plyer: Para notificar o status da conexão com a API.
+
+1. Pandas: Para manipulação de dados em formato de tabela.
+2. Requests: Para fazer solicitações HTTP e obter dados da API.
+3. Plyer: Para notificar o status da conexão com a API.
 
 Requisitos:
+
 Certifique-se de que as bibliotecas mencionadas no arquivo `requirements.txt` estejam instaladas para executar o script.
 
-Instruções:
-1. Defina as URLs das APIs desejadas nos URLs de cada tabela.
-2. Execute o script para obter dados da API e notificações de status.
-3. Opcional: Visualize os DataFrames resultantes para análise adicional.
+Passo a Passo:
 
-Exemplo:
-```python
-url_1 = 'https://brasilapi.com.br/api/banks/v1'
-url_2 = 'https://brasilapi.com.br/api/cvm/corretoras/v1'
-url_3 = 'https://brasilapi.com.br/api/cptec/v1/clima/capital'
+1.	Instale as Bibliotecas:
+Certifique-se de ter instaladas as principais bibliotecas acima e todas do arquivo ‘requirements.txt’
 
-bancos = fazer_requisicao_e_notificar(url_1, 1)
-corretoras = fazer_requisicao_e_notificar(url_2, 2)
-climas = fazer_requisicao_e_notificar(url_3, 3)
+2.	Defina as URLs das APIs:
+Defina as URLs das APIs externas que você deseja acessar. Substitua as variáveis url_1, url_2 e url_3 pelas URLs reais.
 
-df_bancos = pd.DataFrame(bancos)
-df_corretoras = pd.DataFrame(corretoras)
-df_climas = pd.DataFrame(climas)
+3.	Execução do Script:
+Execute o script Python. Ele irá se conectar às APIs, notificar sobre o status da conexão e criar DataFrames com os dados.
 
-# Exiba os primeiros registros do DataFrame de clima
-print(df_climas.head())
+4.	Tratamento de Dados (Opcional):
+Se desejar, você pode realizar tratamento adicional nos DataFrames, como renomear colunas, converter tipos de dados, preencher valores ausentes, etc.
+
+6.	Armazenamento em Banco de Dados:
+O código inclui uma função salvar_base_de_dados que permite salvar os DataFrames em um banco de dados SQLite. Certifique-se de definir o nome do banco de dados desejado e a tabela em que deseja armazenar os dados do dataframe colocado.
