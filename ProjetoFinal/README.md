@@ -51,6 +51,7 @@ O código inclui uma função salvar_base_de_dados que permite salvar os DataFra
 
 # Código Utilizado:
 
+'''
 ## Importando as bibliotecas necessárias
 
 import pandas as pd
@@ -149,3 +150,4 @@ df_corretoras_compactada = df_corretoras[['CNPJ','Tipo','Valor Liq Patrimonio']]
 salvar_base_de_dados(df_bancos,'Bancos','coderhouse.db')
 salvar_base_de_dados(df_climas,'Climas','coderhouse.db')
 salvar_base_de_dados(df_corretoras_compactada,'Corretoras','coderhouse.db')
+'''
