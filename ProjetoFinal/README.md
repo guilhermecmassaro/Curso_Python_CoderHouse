@@ -18,7 +18,7 @@ Abaixo será apresentado algumas dicas para melhor entendimento do código e sua
 
 Documentação: Conexão com APIs e Manipulação de Dados
 
-Introdução
+## Introdução
 
 Este código é um exemplo de um script Python que realiza a conexão com APIs externas para coletar dados e, em seguida, executa algumas operações de manipulação de dados usando a biblioteca Pandas. Além disso, ele demonstra como armazenar os dados em um banco de dados SQLite. Esta documentação fornecerá uma visão geral do código, suas principais funcionalidades e como implementá-lo.
 
@@ -28,11 +28,11 @@ Bibliotecas utilizadas:
 2. Requests: Para fazer solicitações HTTP e obter dados da API.
 3. Plyer: Para notificar o status da conexão com a API.
 
-Requisitos:
+## Requisitos:
 
 Certifique-se de que as bibliotecas mencionadas no arquivo `requirements.txt` estejam instaladas para executar o script.
 
-Passo a Passo:
+## Passo a Passo:
 
 1.	Instale as Bibliotecas:
 Certifique-se de ter instaladas as principais bibliotecas acima e todas do arquivo ‘requirements.txt’
@@ -49,7 +49,7 @@ Se desejar, você pode realizar tratamento adicional nos DataFrames, como renome
 6.	Armazenamento em Banco de Dados:
 O código inclui uma função salvar_base_de_dados que permite salvar os DataFrames em um banco de dados SQLite. Certifique-se de definir o nome do banco de dados desejado e a tabela em que deseja armazenar os dados do dataframe colocado.
 
-Código Utilizado:
+## Código Utilizado:
 
 # Importando as bibliotecas necessárias
 
