@@ -18,15 +18,15 @@ def fazer_requisicao_e_notificar(url, tabela): # função destinada a conectar n
         print(f'Erro na Tabela {tabela} com código {response.status_code}')
         return None
 
-url_1 = 'https://brasilapi.com.br/api/banks/v1'
-url_2 = 'https://brasilapi.com.br/api/cvm/corretoras/v1'
-url_3 = 'https://brasilapi.com.br/api/cptec/v1/clima/capital'
+url_bancos = 'https://brasilapi.com.br/api/banks/v1'
+url_corretoras = 'https://brasilapi.com.br/api/cvm/corretoras/v1'
+url_climas = 'https://brasilapi.com.br/api/cptec/v1/clima/capital'
 
 # Fazendo as requisições com a função necessária e armazenando os dados em variáveis
 
-bancos = fazer_requisicao_e_notificar(url_1, 1) 
-corretoras = fazer_requisicao_e_notificar(url_2, 2)
-climas = fazer_requisicao_e_notificar(url_3, 3)
+bancos = fazer_requisicao_e_notificar(url_bancos, 'Bancos') 
+corretoras = fazer_requisicao_e_notificar(url_corretoras, 'Corretoras')
+climas = fazer_requisicao_e_notificar(url_climas, 'Climas')
 
 # Transformando os dicionários (json) em dataframes
 
