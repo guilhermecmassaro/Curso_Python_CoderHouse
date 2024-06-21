@@ -1,50 +1,50 @@
-"""
-Autor:
+
+Author:
 Guilherme Crivellenti Massaro
 
-Data da Criação:
+Creation Date:
 14/10/2023
 
-Data da Atualização:
+Update Date:
 23/11/2023
 
-Versão:
+Version:
 Python 3.11.6
 
-Notas:
-Abaixo será apresentado algumas dicas para melhor entendimento do código e sua aplicação
+Notes:
+Below are some tips for better understanding the code and its application.
 
 --------------------------------------------------------------------------------------------------------
 
-Documentação: Conexão com APIs e Manipulação de Dados
+Documentation: API Connection and Data Manipulation
 
-# Introdução
+# Introduction
 
-Este código é um exemplo de um script Python que realiza a conexão com APIs externas para coletar dados e, em seguida, executa algumas operações de manipulação de dados usando a biblioteca Pandas. Além disso, ele demonstra como armazenar os dados em um banco de dados SQLite. Esta documentação fornecerá uma visão geral do código, suas principais funcionalidades e como implementá-lo.
+This code is an example of a Python script that connects to external APIs to collect data and then performs some data manipulation operations using the Pandas library. Additionally, it demonstrates how to store the data in an SQLite database. This documentation provides an overview of the code, its main functionalities, and how to implement it.
 
-# Bibliotecas utilizadas:
+# Libraries Used:
 
-1. Pandas: Para manipulação de dados em formato de tabela.
-2. Requests: Para fazer solicitações HTTP e obter dados da API.
-3. Plyer: Para notificar o status da conexão com a API.
+1. Pandas: For table-format data manipulation.
+2. Requests: For making HTTP requests and obtaining data from the API.
+3. Plyer: For notifying the status of the API connection.
 
-# Requisitos:
+# Requirements:
 
-Certifique-se de que as bibliotecas mencionadas no arquivo `requirements.txt` estejam instaladas para executar o script.
+Ensure that the libraries mentioned in the `requirements.txt` file are installed to run the script.
 
-# Passo a Passo:
+# Step-by-Step:
 
-1.	Instale as Bibliotecas:
-Certifique-se de ter instaladas as principais bibliotecas acima e todas do arquivo ‘requirements.txt’
+1. Install the Libraries:
+Ensure the main libraries mentioned above and all from the 'requirements.txt' file are installed.
 
-2.	Defina as URLs das APIs:
-Defina as URLs das APIs externas que você deseja acessar. Substitua as variáveis url_1, url_2 e url_3 pelas URLs reais.
+2. Define the API URLs:
+Define the URLs of the external APIs you want to access. Replace the variables url_1, url_2, and url_3 with the actual URLs.
 
-3.	Execução do Script:
-Execute o script Python. Ele irá se conectar às APIs, notificar sobre o status da conexão e criar DataFrames com os dados.
+3. Execute the Script:
+Run the Python script. It will connect to the APIs, notify about the connection status, and create DataFrames with the data.
 
-4.	Tratamento de Dados (Opcional):
-Se desejar, você pode realizar tratamento adicional nos DataFrames, como renomear colunas, converter tipos de dados, preencher valores ausentes, etc.
+4. Data Processing (Optional):
+If desired, you can perform additional processing on the DataFrames, such as renaming columns, converting data types, filling in missing values, etc.
 
-6.	Armazenamento em Banco de Dados:
-O código inclui uma função salvar_base_de_dados que permite salvar os DataFrames em um banco de dados SQLite. Certifique-se de definir o nome do banco de dados desejado e a tabela em que deseja armazenar os dados do dataframe colocado.
+5. Data Storage in Database:
+The code includes a function `salvar_base_de_dados` that allows saving the DataFrames in an SQLite database. Ensure to define the desired database name and the table where you want to store the DataFrame data.
